@@ -151,7 +151,7 @@ public class CraftMapColorCache implements MapPalette.MapColorCache {
 
     @Override
     public byte matchColor(Color color) {
-        Preconditions.checkState(this.isCached(), "Cache not build jet");
+        Preconditions.checkState(this.isCached(), "Cache not build yet");
 
         return this.cache[this.toInt(color)];
     }

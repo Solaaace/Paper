@@ -2,12 +2,10 @@ package org.bukkit.entity.memory;
 
 import static org.junit.jupiter.api.Assertions.*;
 import net.minecraft.core.GlobalPos;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.ai.memory.MemoryModuleType;
 import org.bukkit.Location;
 import org.bukkit.craftbukkit.entity.memory.CraftMemoryKey;
 import org.bukkit.support.environment.AllFeatures;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 @AllFeatures

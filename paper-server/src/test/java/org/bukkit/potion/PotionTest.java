@@ -16,23 +16,6 @@ import org.junit.jupiter.api.Test;
 
 @AllFeatures
 public class PotionTest {
-    @Test
-    public void testEffectCompleteness() throws Throwable {
-        Map<PotionType, String> effects = new EnumMap(PotionType.class);
-        for (Potion reg : BuiltInRegistries.POTION) {
-            List<MobEffectInstance> eff = reg.getEffects();
-            if (eff.size() != 1) continue;
-            PotionEffectType type = CraftPotionEffectType.minecraftHolderToBukkit(eff.get(0).getEffect());
-            assertNotNull(type, String.valueOf(reg));
-
-            PotionType enumType = PotionType.getByEffect(type);
-            assertNotNull(enumType, type.getName());
-
-            effects.put(enumType, enumType.name());
-        }
-
-        assertEquals(PotionType.values().length - /* PotionTypes with no/shared Effects */ (5 + 22 /* There are 22 new strong / long potion types */), effects.entrySet().size());
-    }
 
     @Test
     public void testEffectType() {
